@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/css/main.css">
+   <title>Tic Tac toe</title>
+</head>
+
+<body>
+
+   <div class="upper-section">
+      <img src="assets/img/pngegg.png" alt="voice image " onclick=changeVolume() id="voice-img">
+      <audio  autoplay loop src="assets/Audio/Voicy_ SpongeBob waves.mp3" id="audio1"></audio>
+   </div>
+   <div class="bubbles">
+      <img src="assets/img/bubbles.png" alt="bubbles image">
+   </div>
+   <audio id="audio" src="assets/Audio/gruntbirthdaysound.mp3"></audio>
+   <div class="main">
+
+      <h1 class="title" id="title">Tic Tac</h1>
+
+      <div class="container">
+         <div class="btn-box">
+         <button id="reset" onclick=reset()>reset</button>
+      </div>
+
+         <div class="game">
+            <div class="box" id="item1" onclick="game(this.id)"></div>
+            <div class="box" id="item2" onclick="game(this.id)"></div>
+            <div class="box" id="item3" onclick="game(this.id)"></div>
+
+            <div class="box" id="item4" onclick="game(this.id)"></div>
+            <div class="box" id="item5" onclick="game(this.id)"></div>
+            <div class="box" id="item6" onclick="game(this.id)"></div>
+
+            <div class="box" id="item7" onclick="game(this.id)"></div>
+            <div class="box" id="item8" onclick="game(this.id)"></div>
+            <div class="box" id="item9" onclick="game(this.id)"></div>
+         </div>
+      </div>
+   </div>
+   <div id="moving-element">
+      <img src="assets/img/2-half-removebg-preview.png" alt="spongebob and baset image" id="move-img">
+   </div>
+   <div id="birth"></div>
+   <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(255, 208, 0);
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/SpongeBob-backgraound.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: -200px -300px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    line-height: 3rem;
+    padding-top: 2rem;
+    overflow-x: auto;
+    color: white;
+}
+
+button {
+    width: 100px;
+    padding-block: 10px;
+    background-color: rgb(255, 174, 0);
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--main-color);
+}
+
+.game {
+    width: 40%;
+    height: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding-block: 1rem;
+
+
+}
+
+.box {
+    width: 90%;
+    height: 100px;
+    border: 1px solid white;
+    background-color: rgb(255, 174, 0);
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.box:hover {
+    background-color: rgb(255, 221, 0);
+    cursor: pointer;
+}
+
+.bubbles img {
+    width: 60%;
+    animation: bubbles 7s linear infinite;
+    -webkit-animation: bubbles 7s linear infinite;
+}
+
+.bubbles {
+    width: 30%;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+@keyframes bubbles {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-80vh);
+        -webkit-transform: translateY(-80vh);
+        -moz-transform: translateY(-80vh);
+        -ms-transform: translateY(-80vh);
+        -o-transform: translateY(-80vh);
+        opacity: 0;
+    }
+
+
+}
+
+@keyframes slideInOut {
+    0% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        opacity: 1;
+        display: unset;
+    }
+
+    50% {
+        transform: translateX(-30%);
+        -webkit-transform: translateX(-30%);
+        -moz-transform: translateX(-30%);
+        -ms-transform: translateX(-30%);
+        -o-transform: translateX(-30%);
+        opacity: 1;
+
+    }
+
+    75% {
+        transform: translateX(-30%);
+        -webkit-transform: translateX(-30%);
+        -moz-transform: translateX(-30%);
+        -ms-transform: translateX(-30%);
+        -o-transform: translateX(-30%);
+    }
+
+    90% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        opacity: 0;
+
+    }
+}
+
+#moving-element img {
+    width: 100%;
+    height: auto;
+}
+
+#moving-element {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    display: none;
+
+}
+
+
+.animate {
+    animation: slideInOut 6s ease-in-out infinite;
+    -webkit-animation: slideInOut 6s ease-in-out infinite;
+    visibility: visible;
+}
+
+#birth {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../img/birthday.gif');
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+    #moving-element img{
+        width: 100%;
+        height: 100%;
+        
+    }
+    #moving-element{
+        width: 40%;
+        height: 40%;
+    }
+    .game{
+        width: 50%;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    #moving-element img{
+        width: 100%;
+        height: 100%;
+        
+    }
+    #moving-element{
+        width: 30%;
+        height: 30%;
+    }
+    .game{
+        width: 60%;
+    }
+    .box{
+        font-size: 1rem;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+.title {
+    background-color: #2f8d46;
+    background-image: url('../img/text-baxk.gif');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: 5px 50px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    word-spacing: 4rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 80px;
+    text-transform: uppercase;
+    font-family: 'Steelfish Rg', 'helvetica neue',
+        helvetica, arial, sans-serif;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+}
+.upper-section{
+    width: 100%;
+}
+.upper-section img{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 1px solid black;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    cursor: pointer;
+}
+.upper-section img:hover{
+    background-color: var(--main-color);
+
+}
